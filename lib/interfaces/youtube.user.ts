@@ -1,4 +1,4 @@
-import { Id, General, Geo, Statistics, Ranks } from './youtube.shared';
+import { Id, General, Statistics, Ranks } from './youtube.shared';
 
 export interface YouTubeUser {
   id: Id;
@@ -65,6 +65,5 @@ export interface UserStatistics extends Statistics {
 }
 
 export interface UserGeneral extends General {
-  geo: Geo;
   branding: Branding;
 }

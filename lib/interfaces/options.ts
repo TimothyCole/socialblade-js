@@ -1,6 +1,12 @@
 export interface Options {
-  // Your Client ID is bound to your account and can never be changed
-  client_id: string;
-  // Your access token is a private idetifier you can change any time for security reasons
-  access_token: string;
+  /**
+   * In most cases you shouldn't need to modify the base_url
+   * Default: https://matrix.sbapis.com/b/
+   */
+  base_url?: string;
+  /**
+   * Customize your User-Agent
+   * Default: 'Social Blade TypeScript Library :: timcole/socialblade-js
+   */
+  user_agent?: string;
 }

@@ -1,5 +1,6 @@
 import { MatrixRequest } from './interfaces/matrix';
 import { Response } from './interfaces/matrix';
+import { Options } from './interfaces/options';
 
 export class Matrix {
   private client_id: string;
@@ -7,11 +8,18 @@ export class Matrix {
 
   private readonly base_url: string = `https://matrix.sbapis.com/b/`;
   private readonly user_agent: string =
-    "Tim's JavaScript Library :: TimothyCole/socialblade-js";
+    'Social Blade TypeScript Library :: timcole/socialblade-js';
 
-  constructor(client_id: string, access_token: string) {
+  constructor(
+    client_id: string,
+    access_token: string,
+    { base_url, user_agent }: Options,
+  ) {
     this.client_id = client_id;
     this.access_token = access_token;
+
+    if (base_url) this.base_url = base_url;
+    if (user_agent) this.user_agent = user_agent;
   }
 
   private async request<T>(

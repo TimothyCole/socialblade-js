@@ -3,6 +3,7 @@ export interface General {
   displayname: string;
   created_at: Date;
   channeltype: string;
+  geo: Geo;
 }
 
 export interface Geo {

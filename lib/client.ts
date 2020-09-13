@@ -6,8 +6,8 @@ export default class SocialBlade {
   private api: Matrix;
   public youtube: YouTube;
 
-  constructor(options: Options) {
-    this.api = new Matrix(options.client_id, options.access_token);
+  constructor(client_id: string, access_token: string, options: Options = {}) {
+    this.api = new Matrix(client_id, access_token, options);
     this.youtube = new YouTube(this.api);
   }
 }

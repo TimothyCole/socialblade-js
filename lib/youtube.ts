@@ -39,12 +39,12 @@ export class YouTube {
     query: 'subscribers' | 'views' | 'sbrank' = 'subscribers',
     page: number = 0,
   ): Promise<YouTubeTop[]> {
-    const req = await this.api.get<YouTubeTop>('youtube/top', {
+    const req = await this.api.get<YouTubeTop[]>('youtube/top', {
       query,
       page,
     });
     if (!req.status.success) throw req.status.error;
 
-    return Object.values(req.data).map((user) => user.data);
+    return req.data;
   }
 }
