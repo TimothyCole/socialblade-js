@@ -1,6 +1,6 @@
 import SocialBlade, { YouTubeTop, YouTubeUser } from '../lib/index';
 
-import 'isomorphic-fetch';
+import 'isomorphic-unfetch';
 import { describe, it } from 'mocha';
 import { expect } from 'chai';
 

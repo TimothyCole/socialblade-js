@@ -6,8 +6,8 @@ export class Matrix {
   private client_id: string;
   private access_token: string;
 
-  private readonly base_url: string = `https://matrix.sbapis.com/b/`;
-  private readonly user_agent: string =
+  private base_url: string = `https://matrix.sbapis.com/b/`;
+  private user_agent: string =
     'Social Blade TypeScript Library :: timcole/socialblade-js';
 
   constructor(

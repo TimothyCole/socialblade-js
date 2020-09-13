@@ -1,8 +1,4 @@
+import { Data } from './matrix.shared';
 import { Id, General, Statistics, Ranks } from './youtube.shared';
 
-export interface YouTubeTop {
-  id: Id;
-  general: General;
-  statistics: Statistics;
-  ranks: Ranks;
-}
+export type YouTubeTop = Data<Id, General, Statistics, Ranks>;
